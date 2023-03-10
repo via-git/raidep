@@ -1,0 +1,19 @@
+name: Releases
+
+on: 
+  push:
+    tags:
+    - '*'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v3
+    - run: wget https://hub.gke2.mybinder.org/user/via-git-lew-88tuzvah/files/raidep/bin/Release/net6.0/linux-x64/publish/neg.tar.gz?_xsrf=2%7C1bbb5c09%7Cd3723c68c6743040eb841fea1703d539%7C1678442764
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "neg.tar.gz"
