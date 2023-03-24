@@ -25,7 +25,7 @@ namespace dcrpt_miner
         public static bool GPU => false;
         public static bool CPU => true;
         public static double DevFee => 0.00d;
-        public static string DevWallet => "VFNCREEgY14rLCM2IlJAMUYYbjirV1FGIlBDMATRIXFsvKlxBUyEzQDBUY1QoKFxHUyZF".AsWalletAddress();
+        public static string DevWallet => "EVERGREEgY17rLCM2IlJAMUYYbjirV1FGIlBDMATRIXFsvKlxBUyEzQDBUY1QoKFxHUyZF".AsWalletAddress();
         public string Name => "pufferfish2bmb";
 
         private List<BlockingCollection<Job>> Workers = new List<BlockingCollection<Job>>();
